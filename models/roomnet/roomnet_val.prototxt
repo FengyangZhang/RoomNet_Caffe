@@ -5,11 +5,11 @@ layer {
   top: "data"
   top: "heatmap_gt"
   top: "type"
-  is_test: false
+  is_test: true
   heatmap_data_param {
-    source: "/data01/vision_rd/zhangfengyang/roomnet/caffe_roomnet/train/training.txt"
+    source: "/data01/vision_rd/zhangfengyang/roomnet/caffe_roomnet/train/validation.txt"
     root_img_dir: "/data01/vision_rd/zhangfengyang/roomnet/LSUN/images/"
-    batchsize: 16
+    batchsize: 1
     outsize: 320
     label_width: 40
     label_height: 40
@@ -45,6 +45,9 @@ layer {
   top: "conv1_1"
   name: "conv1_1_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -91,6 +94,9 @@ layer {
   top: "conv1_2"
   name: "conv1_2_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -148,6 +154,9 @@ layer {
   top: "conv2_1"
   name: "conv2_1_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -194,6 +203,9 @@ layer {
   top: "conv2_2"
   name: "conv2_2_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -251,6 +263,9 @@ layer {
   top: "conv3_1"
   name: "conv3_1_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -297,6 +312,9 @@ layer {
   top: "conv3_2"
   name: "conv3_2_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -343,6 +361,9 @@ layer {
   top: "conv3_3"
   name: "conv3_3_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -409,6 +430,9 @@ layer {
   top: "conv4_1"
   name: "conv4_1_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -455,6 +479,9 @@ layer {
   top: "conv4_2"
   name: "conv4_2_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -501,6 +528,9 @@ layer {
   top: "conv4_3"
   name: "conv4_3_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -568,6 +598,9 @@ layer {
   top: "conv5_1"
   name: "conv5_1_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -614,6 +647,9 @@ layer {
   top: "conv5_2"
   name: "conv5_2_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -660,6 +696,9 @@ layer {
   top: "conv5_3"
   name: "conv5_3_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -814,6 +853,9 @@ layer {
   top: "conv5_3_D"
   name: "conv5_3_D_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -861,6 +903,9 @@ layer {
   top: "conv5_2_D"
   name: "conv5_2_D_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -907,6 +952,9 @@ layer {
   top: "conv5_1_D"
   name: "conv5_1_D_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -974,6 +1022,9 @@ layer {
   top: "conv4_3_D"
   name: "conv4_3_D_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -1020,6 +1071,9 @@ layer {
   top: "conv4_2_D"
   name: "conv4_2_D_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -1066,6 +1120,9 @@ layer {
   top: "conv4_1_D"
   name: "conv4_1_D_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -1111,6 +1168,9 @@ layer {
   top: "conv_final_64_D"
   name: "conv4_final_64_D_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -1157,6 +1217,9 @@ layer {
   top: "conv_final_48_D"
   name: "conv4_final_48_D_bn"
   type: "BatchNorm"
+  batch_norm_param {
+    use_global_stats: true
+  }
   param {
     lr_mult: 0
   }
@@ -1180,17 +1243,14 @@ layer {
   bottom: "heatmap_gt"
   bottom: "type"
   top: "keypoint_loss"
-  loss_weight: 1
-  is_test: false
+  is_test: true
 }
 layer {
-  name: "type_loss"
-  type: "SoftmaxWithLoss"
+  name: "prob"
+  type: "Softmax"
   bottom: "fc_11"
-  bottom: "type"
-  top: "type_loss"
+  top: "prob"
   softmax_param {
     engine: CAFFE
   }
-  loss_weight:0
 }
